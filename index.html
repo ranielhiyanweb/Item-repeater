@@ -4,6 +4,7 @@
 <head>
 	<title>secret kay dakonkog oten</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" href="1.css">
 </head>
 <style>
 
@@ -69,6 +70,18 @@ button {
 	<button onclick="loop()">loop</button>
 	<div id="output"></div>
 	<button id="copy-button" onclick="copy()">copy</button>
+
+
+      <dialog id="donateBanner" class="donate-banner">
+<img style="width:40px" src="res/logo.png"></img>
+        <p>Hey 👋 Would you like to donate us we accept gcash/regular load❤️ any amount will be highly Appreciated</p>
+  
+        <span  id="donateButton">Donate</span>
+       
+        <span id="closeButton">CLOSE</span>
+    </dialog>	
+      
+      
 	<script>
 	  function loop() {
 	    var emoji = document.getElementById("emoji").value;
@@ -92,5 +105,6 @@ button {
 	</script>
 	<script src="script.js"></script>
 	<script src="index.js"></script>
+	<script src="res/banner.js"></script>
 </body>
 </html>
