@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let deferredPrompt;
     setTimeout(() => {
         donateBanner.style.display = 'block';
-    }, 4000);
+    }, 10000);
     donateButton.addEventListener('click', () => {
         window.location.href = 'https://www.facebook.com/profile.php?id=61555221003228';
     });
