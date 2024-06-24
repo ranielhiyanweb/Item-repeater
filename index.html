@@ -1,0 +1,96 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>secret kay dakonkog oten</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<style>
+
+body {
+	font-family: arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+	text-align: center;
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+input[type="text"] {
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+
+button {
+	padding: 5px 10px;
+	background-color: #4caf50;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+#output {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+	  margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    
+}
+
+#copy-button {
+	margin-top: 10px;
+	padding: 5px 10px;
+	background-color: #4caf50;
+	color: #fff;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+</style>
+<body>
+	<h1>Raniel Bigdick</h1>
+	<label for="emoji">choose an emoji:</label>
+	<input type="text" id="emoji" name="emoji">
+	<label for="repeat">how many times to repeat:</label>
+	<input type="number" id="repeat" name="repeat" min="1" max="100">
+	<button onclick="loop()">loop</button>
+	<div id="output"></div>
+	<button id="copy-button" onclick="copy()">copy</button>
+	<script>
+	  function loop() {
+	    var emoji = document.getElementById("emoji").value;
+	    var repeat = document.getElementById("repeat").value;
+	    var output = document.getElementById("output");
+	    output.innerHTML = "";
+	    for (var i = 0; i < repeat; i++) {
+	      output.innerHTML += emoji + "<br>";
+	    }
+	  }
+	  
+	  function copy() {
+	    var output = document.getElementById("output");
+	    var range = document.createRange();
+	    range.selectNode(output);
+	    window.getSelection().removeAllRanges();
+	    window.getSelection().addRange(range);
+	    document.execCommand("copy");
+	    window.getSelection().removeAllRanges();
+	  }
+	</script>
+	<script src="script.js"></script>
+	<script src="index.js"></script>
+</body>
+</html>
