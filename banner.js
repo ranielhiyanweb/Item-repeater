@@ -10,6 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'https://www.facebook.com/profile.php?id=61555221003228';
     });
     closeButton.addEventListener('click', () => {
-        donateBanner.style.display = 'none';
+        donateBanner.style.display = '';
     });
 });
