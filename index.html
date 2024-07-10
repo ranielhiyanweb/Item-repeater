@@ -68,75 +68,6 @@ button {
 
 
 
-/* The Close Button */
-.octo_close, .octo_as_close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Donator List */
-.donator-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.donator-list li {
-  padding: 10px;
-  border-bottom: 1px solid #ccc;
-}
-
-.donator-list li:last-child {
-  border-bottom: none;
-}
-
-.donator-list img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
-
-/* Open Modal Button */
-.open-modal, .open-appstategetter, .btn{
-  background-color: #337ab7;
-  color: #fff;
-  border: none;
-  margin: 2px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-/*hhhhgc*/
-fieldset, dialog {
-  border: 1px solid #4caf50;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.fieldset-container {
-background-color: #DFF0D8; 
-            padding: 10px;
-            border: 1px solid #3C763D;
-            margin-top: 10px;
-            border-radius: 4px; 
-}
-legend {
-  font-size: 20px;
-  color: #333;
-  border: 1.2px solid #4caf50;
-  background-color: white;
-  border-radius: 5px;
-}
 .donate-banner {
   justify-content:center;
    display: none;
@@ -179,13 +110,7 @@ legend {
             color: black;
             cursor: pointer;
         }*/
-       /* .myPrefix {
-    padding: 2px;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-  }*/
+
 
 </style>
 <body>
@@ -194,7 +119,7 @@ legend {
 	<input type="text" placeholder="Type content..." id="emoji" name="emoji">
 	<label for="repeat">how many times to repeat:</label>
 	<input type="number" placeholder=">..."id="repeat" name="repeat" min="1" max="100">
-	<button onclick="loop()">loop</button>
+	<button onclick="oten()">loop</button>
 	<div id="output"></div>
 	<button id="copy-button" onclick="copy()">copy</button>
 
@@ -214,12 +139,12 @@ legend {
       
       
 	<script>
-	  function loop() {
-	    var emoji = document.getElementById("emoji").value;
-	    var repeat = document.getElementById("repeat").value;
-	    var output = document.getElementById("output");
+	  function oten() {
+	    let emoji = document.getElementById("emoji").value;
+	    let repeat = document.getElementById("repeat").value;
+	    const output = document.getElementById("output");
 	    output.innerHTML = "";
-	    for (var i = 0; i < repeat; i++) {
+	    for(var i = 0; i < repeat; i++) {
 	      output.innerHTML += emoji + "<br>";
 	    }
 	  }
@@ -250,7 +175,7 @@ alert ($me);
     let deferredPrompt;
     setTimeout(() => {
         donateBanner.style.display = 'block';
-    }, 1000);
+    }, 5000);
     donateButton.addEventListener('click', () => {
         window.location.href = 'https://www.facebook.com/profile.php?id=61555221003228';
     });
